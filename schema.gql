@@ -1,0 +1,42 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+"""Date custom scalar type"""
+scalar Date
+
+type Mutation {
+  loginUser(data: UserLoginInputDto!): SignIn!
+  signUpUser(data: UserSignUpInputDto!): User!
+}
+
+type Query {
+  sayHello: String!
+}
+
+type SignIn {
+  access_token: String!
+  user: User!
+}
+
+type User {
+  created_at: Date!
+  deleted_at: Date
+  email: String!
+  id: Float!
+  name: String!
+  password: String!
+  updated_at: Date!
+}
+
+input UserLoginInputDto {
+  email: String!
+  password: String!
+}
+
+input UserSignUpInputDto {
+  confirm_password: String!
+  email: String!
+  name: String!
+  password: String!
+}
