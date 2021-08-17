@@ -1,7 +1,7 @@
 import { createParamDecorator, ExecutionContext } from '@nestjs/common';
 import { GqlExecutionContext } from '@nestjs/graphql';
 
-export const User = createParamDecorator(
+export const LoggedInUser = createParamDecorator(
   (data: unknown, context: ExecutionContext) => {
     if (context.getType() === 'http') {
       const ctx = context.switchToHttp();
